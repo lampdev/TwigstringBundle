@@ -48,4 +48,11 @@ class StringLoader implements \Twig_LoaderInterface
         return true;
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function getSourceContext($name)
+    {
+        return new \Twig_Source($name, $name);
+    }
 }
